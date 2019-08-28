@@ -1,0 +1,47 @@
+<html>
+  <head></head>
+  <body>
+    <% unless display.nil? %>
+      <table>
+      <tr>
+      <% header.each do |t| %>
+          <th><%= t %> </th>
+      <% end %>
+      <% word_arr.each do |t| %>
+         <th><%= t %> </th>
+      <% end %>
+      </tr>
+      <% array.each do |t| %>
+      <tr>
+      <% t.each do |y| %>
+          <td><%= y %></td>
+          <% end %>
+       </tr>
+       <% end %>
+       </table>
+      <p>
+	  <a href="/">Back to main page</a>
+      <p>
+    <% end %>
+    <% unless ready %>
+      <form>
+          <label>True symbol:</label>
+          <input type='text' name='truth' />
+          <p>
+          <label>False symbol:</label>
+          <input type='text' name = 'false' />
+          <p>
+          <p>
+          <label>Size (2^x):</label>
+          <input type ='text' name = 'size' />
+          <p>
+          <p>
+          <input type='submit' value='Show truth table' />
+          <p>
+      </form>
+      <p>
+      <a href="/">Reload page</a>
+      <p>
+    <% end %>
+  </body>
+</html>
